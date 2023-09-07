@@ -13,7 +13,7 @@ const router = express.Router()
 
 
 //POST save accommodation to db
-router.post('/accommodations', async (req, res) => {
+router.post('/api/accommodations', async (req, res) => {
     mongoose.set('strictQuery', false);
     mongoose.connect(process.env.DB_CONNECT);
 
@@ -58,7 +58,7 @@ router.post('/accommodations', async (req, res) => {
 })
 
 //GET all places(to show initially on homepage)
-router.get('/accommodations', async (req, res) => {
+router.get('/api/accommodations', async (req, res) => {
     mongoose.set('strictQuery', false);
     mongoose.connect(process.env.DB_CONNECT);
 
@@ -76,7 +76,7 @@ router.get('/accommodations', async (req, res) => {
 })
 
 //GET a user's added places
-router.get('/user-accommodations', async (req, res) => {
+router.get('/api/user-accommodations', async (req, res) => {
     mongoose.set('strictQuery', false);
     mongoose.connect(process.env.DB_CONNECT);
 
@@ -99,7 +99,7 @@ router.get('/user-accommodations', async (req, res) => {
 
 
 //GET place by ID
-router.get('/accommodations/:id', async (req, res) => {
+router.get('/api/accommodations/:id', async (req, res) => {
     mongoose.set('strictQuery', false);
     mongoose.connect(process.env.DB_CONNECT);
 
@@ -112,7 +112,7 @@ router.get('/accommodations/:id', async (req, res) => {
 
 
 //EDIT place by ID
-router.put('/accommodations/:id', async (req, res) => {
+router.put('/api/accommodations/:id', async (req, res) => {
     mongoose.set('strictQuery', false);
     mongoose.connect(process.env.DB_CONNECT);
 

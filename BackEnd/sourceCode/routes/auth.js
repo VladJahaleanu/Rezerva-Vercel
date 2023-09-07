@@ -7,7 +7,7 @@ const { registerValidation, loginValidation } = require('../validation')
 const router = express.Router()
 
 //REGISTER
-router.post('/register', async (req, res) => {
+router.post('/api/register', async (req, res) => {
     mongoose.set('strictQuery', false);
     mongoose.connect(process.env.DB_CONNECT);
     
@@ -45,7 +45,7 @@ router.post('/register', async (req, res) => {
 })
 
 //LOGIN
-router.post('/login', async (req, res) => {
+router.post('/api/login', async (req, res) => {
     mongoose.set('strictQuery', false);
     mongoose.connect(process.env.DB_CONNECT);
     
@@ -74,7 +74,7 @@ router.post('/login', async (req, res) => {
 })
 
 //GET profile
-router.get('/profile', async (req, res) => {
+router.get('/api/profile', async (req, res) => {
     mongoose.set('strictQuery', false);
     mongoose.connect(process.env.DB_CONNECT);
     

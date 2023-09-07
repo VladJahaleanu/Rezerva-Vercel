@@ -13,7 +13,7 @@ const mimetypes = require('mime-types')
 const router = express.Router()
 
 //Save photo to server using link
-router.post('/upload-using-link', async (req, res) => {
+router.post('/api/upload-using-link', async (req, res) => {
     mongoose.set('strictQuery', false);
     mongoose.connect(process.env.DB_CONNECT);
     const {link} = req.body;
@@ -36,7 +36,7 @@ router.post('/upload-using-link', async (req, res) => {
 })
 
 const photosMiddleware = multer({dest: '/tmp'});
-router.post('/upload-photos', photosMiddleware.array('photos', 50), async (req, res) => {
+router.post('/api/upload-photos', photosMiddleware.array('photos', 50), async (req, res) => {
     mongoose.set('strictQuery', false);
     mongoose.connect(process.env.DB_CONNECT);
     const uploadedFiles = [];

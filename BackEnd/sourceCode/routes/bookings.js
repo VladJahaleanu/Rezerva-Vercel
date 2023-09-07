@@ -11,7 +11,7 @@ const router = express.Router()
 
 
 //Create booking
-router.post('/bookings', async (req, res) => {
+router.post('/api/bookings', async (req, res) => {
     mongoose.set('strictQuery', false);
     mongoose.connect(process.env.DB_CONNECT);
     
@@ -61,7 +61,7 @@ router.post('/bookings', async (req, res) => {
 })
 
 //GET a user's bookings
-router.get('/bookings', async (req, res) => {
+router.get('/api/bookings', async (req, res) => {
     mongoose.set('strictQuery', false);
     mongoose.connect(process.env.DB_CONNECT);
     
@@ -82,7 +82,7 @@ router.get('/bookings', async (req, res) => {
 })
 
 //used to fetch unavailable dates for a specific location
-router.post('/unavailable-dates', async (req, res) => {
+router.post('/api/unavailable-dates', async (req, res) => {
     mongoose.set('strictQuery', false);
     mongoose.connect(process.env.DB_CONNECT);
     
@@ -96,7 +96,7 @@ router.post('/unavailable-dates', async (req, res) => {
     }
 })
 
-router.delete('/bookings/:id', async (req, res) => {
+router.delete('/api/bookings/:id', async (req, res) => {
     mongoose.set('strictQuery', false);
     mongoose.connect(process.env.DB_CONNECT);
 
