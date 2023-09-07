@@ -13,7 +13,7 @@ import AccommodationPage from "./pages/AccommodationPage";
 import BookingsPage from "./pages/BookingsPage";
 import SingleBookingPage from "./pages/SingleBookingPage";
 
-axios.defaults.baseURL= 'http://localhost:44302';
+axios.defaults.baseURL= import.meta.env.VITE_API_BASE_URL;
 
 function App() {
   return (
