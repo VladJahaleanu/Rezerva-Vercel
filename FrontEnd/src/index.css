@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type='text'], input[type='password'], input[type='email'], input[type='number'] {
+  @apply w-full border my-1 py-2 px-3 rounded-full;
+  
+}
+
+textarea {
+  @apply w-full border my-1 py-2 px-3 rounded-2xl;
+}
+button {
+  @apply bg-gray-300;
+}
+
+button.login {
+  background-color: #33B5FF;
+  @apply bg-primary w-full p-3 my-1 text-white rounded-full;
+}
+
+button.logoutBtn {
+  width: 10%;
+}
+
+button.primary {
+  background-color: #33B5FF;
+  @apply bg-primary w-full p-3 my-1 text-white rounded-full;
+}
+
+textarea {
+  height: 100px;
+}
+
+div.datePicker {
+  width: 50%;
+}
+
+div.diplayPhotos {
+  width: 75%;
+}
+
+input.searchBar {
+  width: 20%;
+}
+
+.select {
+  width: 20%;
+}
+
+.formSelect {
+  width: 50%;
+}
+
+
+
+
