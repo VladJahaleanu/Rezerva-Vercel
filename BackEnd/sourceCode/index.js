@@ -12,7 +12,9 @@ const placeRoute = require('./routes/place')
 const bookingsRoute = require('./routes/bookings')
 
 app.use(cors({
-    origin: '*'
+  origin: 'https://rezerva-client.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  credentials: true,
 }));
 
 app.use(bodyParser.json())
